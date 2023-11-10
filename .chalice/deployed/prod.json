@@ -1,0 +1,28 @@
+{
+  "resources": [
+    {
+      "name": "managed-layer",
+      "resource_type": "lambda_layer",
+      "layer_version_arn": "arn:aws:lambda:eu-west-3:114648490993:layer:publicapi-prod-managed-layer:3"
+    },
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::114648490993:role/publicapi-prod",
+      "role_name": "publicapi-prod"
+    },
+    {
+      "name": "api_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:eu-west-3:114648490993:function:publicapi-prod"
+    },
+    {
+      "name": "rest_api",
+      "resource_type": "rest_api",
+      "rest_api_id": "r25n158jil",
+      "rest_api_url": "https://r25n158jil.execute-api.eu-west-3.amazonaws.com/api/"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}
