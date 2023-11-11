@@ -3,7 +3,7 @@
     {
       "name": "managed-layer",
       "resource_type": "lambda_layer",
-      "layer_version_arn": "arn:aws:lambda:eu-west-3:114648490993:layer:publicapi-prod-managed-layer:3"
+      "layer_version_arn": "arn:aws:lambda:eu-west-3:114648490993:layer:publicapi-prod-managed-layer:4"
     },
     {
       "name": "default-role",

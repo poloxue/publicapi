@@ -2,7 +2,7 @@ import time
 
 from chalice.app import Chalice
 
-from chalicelib.image_controller import ImageController
+from chalicelib.image_service import ImageService
 
 app = Chalice(app_name="publicapi")
 
@@ -19,9 +19,9 @@ def uptime():
     return f"uptime: {time.time() - start_time}"
 
 
-image_ctrl = ImageController()
+image_svc = ImageService()
 
 
-@app.route("/image/random", methods=["GET"])
-def random_image():
-    return {"image": image_ctrl.random_image()}
+@app.route("/image/random/{category}", methods=["GET"])
+def random_image(category):
+    return {"image": image_svc.random_image(category)}
